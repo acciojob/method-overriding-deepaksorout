@@ -3,8 +3,9 @@ package com.driver;
 import org.w3c.dom.ls.LSOutput;
 
 public class Main {
-  String temp1=A.meth();
-  String temp2=B.meth();
+    B obj=new B();
+  String temp1=obj.meth();
+  String temp2=obj.meth();
 }
 class A{
     public static String meth(){
