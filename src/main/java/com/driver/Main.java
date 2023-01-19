@@ -1,18 +1,23 @@
 package com.driver;
 
 import org.w3c.dom.ls.LSOutput;
-class A{
-    public static String meth(){
-        return"Invoking method from class A";
-    }
-}
-class B extends A{
-    public static String meth() {
-        return "Method is overridden in Extendend class B";
-    }
-}
+
 public class Main {
-    B obj=new B();
-  String temp1=obj.meth();
-  String temp2=obj.meth();
+    public static class A{
+        public String meth(){
+            return"Invoking method from class A";
+        }
+    }
+    public static class B extends A{
+        public String meth(){
+            return "Method is overridden in Extendend class B";
+        }
+    }
+    public static void main(String[] args) {
+        B b=new B();
+        b.meth();
+
+        B b1=new B();
+        b1.meth();
+    }
 }
